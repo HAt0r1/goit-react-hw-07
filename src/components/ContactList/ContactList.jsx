@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from "react-redux";
 import { filterContacts, selectLoading } from "../../redux/selectors";
-import { fetchContacts } from "../../redux/operations";
+import { fetchContacts } from "../../redux/contactsOps";
 import Contact from "../Contact/Contact";
 import Loader from "../Loader/Loader";
 
