@@ -35,7 +35,9 @@ const contactSlice = createSlice({
       .addCase(deleteContact.fulfilled, (state, action) => {
         state.loading = false;
         state.error = null;
-        state.items.filter((contact) => contact.id !== action.payload);
+        state.items = state.items.filter(
+          (contact) => contact.id !== action.payload.id
+        );
       })
       .addCase(deleteContact.rejected, setError);
   },
